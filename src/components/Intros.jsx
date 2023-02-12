@@ -18,6 +18,10 @@ function Intros ({ handleClick, animation }) {
               Comenzar
             </p>
           </button>
+          <button
+            className='fqa-mobile' onClick={handleClick}
+          >CONTINUAR
+          </button>
         </div>
       </section>
       <p className={animation ? 'hm-extraInfoOut' : 'hm-extraInfo'}>Con inteligencia artifical

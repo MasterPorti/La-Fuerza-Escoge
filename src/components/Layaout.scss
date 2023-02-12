@@ -1,5 +1,6 @@
 .main-container{
     display: flex;
+    align-items: center;
 }
 
 .ly-container{
@@ -68,6 +69,12 @@
     }
 }
 
+@media screen and (max-width: 1162px) {
+    .ly-container {
+        display: none;
+    } 
+  }
+
 /// Home Styles 🏠
 
 .hm-container{
@@ -93,6 +100,7 @@
     animation-name: titleAnimatio;
     animation-duration: 1s;
 }
+
 
 @keyframes titleAnimatio {
     from{
@@ -163,6 +171,41 @@
     }
 }
 
+@media screen and (max-width: 665px) {
+    .hm-title {
+        font-size: 4rem;
+        height: 4rem;
+    }
+    .hm-titleOut{
+        font-size: 4rem;
+        height: 4rem;
+    }
+    .hm-subtitle{
+        font-size: 2rem;
+    }
+    .hm-subtitleOut{
+        font-size: 2rem;
+    }
+
+  }
+
+  @media screen and (max-width: 422px) {
+    .hm-title {
+        font-size: 3rem;
+        height: 3rem;
+    }
+    .hm-titleOut{
+        font-size: 3rem;
+        height: 3rem;
+    }
+    .hm-subtitle{
+        font-size: 1rem;
+    }
+    .hm-subtitleOut{
+        font-size: 1rem;
+    }
+
+  }
 
 .hm-contentContainer{
     display: flex;
@@ -187,6 +230,8 @@
     }
 }
 
+
+
 .hm-firstCuesntionContainerOut{
     opacity: 0;
     p{
@@ -202,6 +247,41 @@
     animation-name: titleAnimatioOut;
     animation-duration: .3s;
 }
+
+
+@media screen and (max-width: 638px) {
+    .hm-firstCuesntionContainer p{ 
+        font-size: 4rem;
+    } 
+    .hm-firstCuesntionContainerOut p{ 
+        font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 514px) {
+    .hm-firstCuesntionContainer p{ 
+        font-size: 3rem;
+    } 
+    .hm-firstCuesntionContainerOut p{ 
+        font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .hm-firstCuesntionContainer p{ 
+        font-size: 2rem;
+    } 
+    .hm-firstCuesntionContainerOut p{ 
+        font-size: 2rem;
+    }
+  }
+
+  .fqa-mobile{
+    display: none;
+  }
+
+
+
 
 .hm-startButtonContainer{
     font-size: 3rem;
@@ -221,6 +301,30 @@
     align-items: center;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 798px) {
+    .fqa-mobile{
+        display: flex;
+        border: solid 4px #F5CA00;
+        cursor: pointer;
+        font-weight: 900;
+        font-size: 2rem;
+        border-radius: .5rem;
+        transition: border .3s;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        transition: box-shadow .3s;
+        &:hover{
+            box-shadow: 0px 0px 15px 14px #f5c80042;
+        }
+    }
+    .hm-startButton{
+        display: none;
+    }
+  }
 
 .hm-laser{
     position: absolute;
