@@ -457,12 +457,82 @@
     text-align: center;
 }
 
+@media screen and (max-width: 1112px) {
+    .fq-cuestion{
+        font-size: 3rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 664px) {
+    .fq-cuestion{
+        font-size: 2rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    .fq-cuestion{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
 .fq-options{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
 }
+
+@media screen and (min-width: 1112px) {
+    .fq-options{
+       gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1112px) {
+    .fq-options{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .fq-options{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .fq-buttonOther:nth-child(3) {
+        margin-top: 1rem;
+      }
+}
+
+@media screen and (max-width: 590px) {
+    .fq-cuestion{
+        margin-top: 3rem;
+    }
+    .fq-options{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .fq-mdsimple{
+        margin-top: 1rem;
+    }
+    .fq-buttonOther:nth-child(3) {
+        margin-top: 1rem;
+      }
+}
+
+
 
 .fq-buttonSimple{
     padding-left: 1rem;
@@ -585,6 +655,25 @@
     transition: box-shadow .3s;
     animation-name: fqinputout;
     animation-duration: .5s;
+}
+
+
+@media screen and (max-width: 662px) {
+    .fq-inputOut{
+        width: 90vw;
+    }
+    .fq-input{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    .fq-inputOut{
+        font-size: 1.5rem;
+    }
+    .fq-input{
+        font-size: 1.5rem;
+    }
 }
 
 @keyframes fqinputout {

@@ -60,7 +60,7 @@ function FirtsCuestion ({ hideFirst, answer }) {
           >Me uno
           </button>
           <button
-            className={`${veoLaPelea ? 'fqa' : 'fq-buttonSimple'}`}
+            className={`${veoLaPelea ? 'fqa' : 'fq-buttonSimple'} fq-mdsimple`}
             onClick={handleButton} id='Veo La Pelea'
           >Veo La pelea
           </button>
