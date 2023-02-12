@@ -726,6 +726,23 @@
     }
 }
 
+@media screen and (max-width: 650px) {
+    .fq-cuestionOne{
+        font-size: 2rem;
+    }
+    .fq-cuestionTwo{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .fq-cuestionOne{
+        font-size: 1.5rem;
+    }
+    .fq-cuestionTwo{
+        font-size: 1.5rem;
+    }
+}
 
 // ------------------ Card Container ------------------
 .cd-container{
