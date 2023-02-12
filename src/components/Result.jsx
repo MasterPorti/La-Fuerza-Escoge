@@ -49,7 +49,7 @@ const Card = ({ color, result }) => {
       <div className={`cd-card cd-card${color}`}>
         <section className='cd-profile'>
           <img src={Profile} alt='profile' className='cd-profileImage' />
-          <p>Chopper</p>
+          <p>Magma</p>
         </section>
         <section className='cd-info'>
           <p className='cd-infoTitle'>{result === 'Imperio' ? 'Galáctico' : 'Alianza'}</p>
