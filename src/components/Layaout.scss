@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     width: 25rem; 
+    font-weight: 900;
 }
 
 .ly-logo{
@@ -259,7 +260,7 @@
     font-weight: 400;
     width: 18rem;
     text-align: center;
-    .revelde{
+    .rebelde{
         font-weight: 900;
         color: #D7F4FE;
         text-shadow: 0px 4px 21px #0178F3;
@@ -276,7 +277,7 @@
     font-weight: 400;
     width: 18rem;
     text-align: center;
-    .revelde{
+    .rebelde{
         font-weight: 900;
         color: #D7F4FE;
         text-shadow: 0px 4px 21px #0178F3;
@@ -300,4 +301,361 @@
 }
 
 
+/* ------------------ First Question ------------------ */
 
+.fq-mainContainer{
+    height: calc(100vh - 20rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.fq-cuestion{
+    font-weight: 900;
+    font-size: 3rem;
+    width: 55rem;
+    text-align: center;
+}
+
+.fq-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.fq-buttonSimple{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border: solid 4px #979797;
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: border .3s;
+    &:hover{
+        border: solid 4px #F5CA00;
+    }
+}
+
+.fq-buttonOther{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border: solid 4px #6A52E7;
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: box-shadow .3s;
+    &:hover{
+        box-shadow: 0px 0px 15px 14px #332289b8;
+    }
+}
+
+.fq-continue{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border: solid 4px #979797;
+    font-weight: 900;
+    font-size: 2rem;
+    border-radius: .5rem;
+    transition: border .3s;
+}
+.fqa{
+    border: solid 4px #F5CA00;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 2rem;
+    border-radius: .5rem;
+    transition: border .3s;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    transition: box-shadow .3s;
+    &:hover{
+        box-shadow: 0px 0px 15px 14px #f5c80042;
+    }
+}
+.fq-animationOut{
+    opacity: 0;
+    animation-name: fqAnimationOut;
+    animation-duration: .3s;
+}
+@keyframes fqAnimationOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.fq-input{
+    font-weight: 900;
+    font-size: 2rem; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    width: 40rem;
+    border: solid 4px #6A52E7;
+    text-align: center;
+    border-radius: .5rem;
+    outline: none;
+    animation-name: fqinputin;
+    animation-duration: 1s;
+    transition: box-shadow .3s;
+    &:focus{
+        box-shadow: 0px 0px 15px 14px #332289b8;
+    }
+}
+@keyframes fqinputin {
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 40rem;
+    }
+}
+
+.fq-inputOut{
+    opacity: 0;
+    font-weight: 900;
+    font-size: 2rem; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    width: 40rem;
+    border: solid 4px #6A52E7;
+    text-align: center;
+    border-radius: .5rem;
+    outline: none;
+    animation-name: fqinputin;   //! Aqui se repite la animacion de fqinputin
+    animation-duration: 1s;
+    transition: box-shadow .3s;
+    animation-name: fqinputout;
+    animation-duration: .5s;
+}
+
+@keyframes fqinputout {
+    from{
+        opacity: 1;
+        width: 40rem;
+    }
+    to{
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.fq-containerCuestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fq-cuestionOne{
+    font-weight: 900;   
+    font-size: 3rem;
+    animation-name: cuestionOne;
+    animation-duration: 1s;
+}
+@keyframes cuestionOne {
+    from{
+        transform: translate(50rem);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+
+.fq-cuestionTwo{
+    font-weight: 900;   
+    font-size: 3rem;
+    animation-name: cuestionTwo;
+    animation-duration: 1s;
+}
+@keyframes cuestionTwo {
+    from{
+        transform: translate(-50rem);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+
+// ------------------ Card Container ------------------
+.cd-container{
+    margin-top: 8rem;
+}
+
+.cd-cardMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 20rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    background-size: 400% 400%;
+    background-position: left top;
+}
+
+.cd-cardMainGreen {
+    background-image: linear-gradient(99.5deg, rgba(73, 154, 66, 0.4) 17.96%, rgba(73, 154, 66, 0.2) 64.68%);
+    border: 4px solid #89B637;
+    transition: background-position 2s ease-in-out;
+    background-position: right bottom;
+  }
+  
+  .cd-cardMainBlue {
+    background-image: linear-gradient(99.5deg, #0178F366 17.96%, #0178F333 64.68%);
+    border: 4px solid #0178F3;
+    transition: background-position 2s ease-in-out;
+    background-position: left bottom;
+  }
+
+  .cd-cardMainRed {
+    background-image: linear-gradient(99.5deg, #79000066 17.96%, #79000033 64.68%);
+    border: 4px solid #790000;
+    transition: background-position 2s ease-in-out;
+    background-position: right bottom;
+  }
+
+  .cd-cardMainWhite {
+    background-image: linear-gradient(99.5deg, #ffffff66 17.96%, #ffffff33 64.68%);
+    border: 4px solid #fff;
+    transition: background-position 2s ease-in-out;
+    background-position: left bottom;
+  }
+
+.cd-card{
+    width: 48rem;
+    height: 18rem;
+    overflow: hidden;
+    transition: border 2s ease-in-out;
+}
+
+.cd-cardGreen{
+    border: 4px solid #89B637;
+    transition: border 2s ease-in-out;
+}
+
+
+.cd-cardBlue{
+    border: 4px solid #0178F3;
+    transition: border 2s ease-in-out;
+}
+
+.cd-cardRed{
+    border: 4px solid #790000;
+    transition: border 2s ease-in-out;
+}
+.cd-cardWhite{
+    border: 4px solid #fff;
+    transition: border 2s ease-in-out;
+}
+
+.cd-profile{
+    margin: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+.cd-profileImage{
+    width: 3rem;
+}
+
+.cd-rebelde{
+    width: 15rem;
+    transform: translate(-17.5rem , 2rem);
+    position: absolute;
+    opacity: .3;
+}
+
+.cd-info{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cd-infoTitle{
+    font-size: 1.5rem;
+}
+
+.cd-infoSubtitle{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    font-size: 3rem;
+    font-weight: 900;
+    &::after{
+        content: "";
+        display: block;
+        width: 150%;
+        height: 4px;
+        background: #ffffff;
+    }
+}
+
+
+.cd-infoExtra{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+// ------------------ Buttons Style ------------------
+
+.cd-colors{
+    display: flex;
+    gap: 1rem;
+}
+
+.cd-button{
+    cursor: pointer;
+    border-radius: 3rem;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.cd-buttonGreen{
+    background-color: #89B637;
+}
+
+.cd-buttonBlue{
+    background-color: #0178F3;
+}
+
+.cd-buttonRed{
+    background-color: #790000;
+}
+
+.cd-buttonWhite{
+    background-color: #fff;
+}

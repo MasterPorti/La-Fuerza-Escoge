@@ -21,7 +21,7 @@ function Intros ({ handleClick, animation }) {
         </div>
       </section>
       <p className={animation ? 'hm-extraInfoOut' : 'hm-extraInfo'}>Con inteligencia artifical
-        detectaremos si eres <span className='revelde'>Revelde </span>o Del <span className='imperio'>Imperio</span>
+        detectaremos si eres <span className='rebelde'>Rebelde </span>o Del <span className='imperio'>Imperio</span>
       </p>
     </>
   )
