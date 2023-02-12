@@ -1,6 +1,5 @@
 .main-container{
     display: flex;
-    align-items: center;
 }
 
 .ly-container{
@@ -69,11 +68,46 @@
     }
 }
 
+.ly-mobileButton{
+    display: none;
+}
+
 @media screen and (max-width: 1162px) {
     .ly-container {
         display: none;
     } 
+    .ly-mobileButton{
+        display: flex;
+        position: absolute;
+        width: 3rem;
+        margin: 1rem;
+    }
+    
   }
+
+.ly-hidden{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.ly-closeButtonHidden{
+    display: none;
+}
+
+.ly-closeButton{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    cursor: pointer;
+}
 
 /// Home Styles 🏠
 
