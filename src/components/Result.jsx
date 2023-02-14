@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Profile from '../assets/grogu.png'
+import Profile01 from '../assets/prifileDarth.webp'
+import Profile02 from '../assets/profielStoorn.jpg'
+import Profile03 from '../assets/profileAna.webp'
 import Rebelde from '../assets/rebelde.png'
 import Imperio from '../assets/imperio.png'
 const Result = ({ firstFetch, secondFetch, thirdFetch, fourthFetch, fiveFetch }) => {
   const [color, setColor] = useState('Green')
   const [result, setResult] = useState('')
+  const [name, setName] = useState('Magma')
+  const [profile, setProfile] = useState(Profile)
   useEffect(() => {
     const results = [firstFetch, secondFetch, thirdFetch, fourthFetch, fiveFetch]
     console.log(results)
@@ -31,25 +36,41 @@ const Result = ({ firstFetch, secondFetch, thirdFetch, fourthFetch, fiveFetch })
   }, [])
   return (
     <div className='cd-container'>
-      <p>{result}</p>
-      <Card color={color} result={result} />
+      <Card color={color} result={result} name={name} profile={profile} />
       <section className='cd-colors'>
-        <button onClick={() => setColor('Green')} className='cd-button cd-buttonGreen' />
-        <button onClick={() => setColor('Blue')} className='cd-button cd-buttonBlue' />
-        <button onClick={() => setColor('Red')} className='cd-button cd-buttonRed' />
-        <button onClick={() => setColor('White')} className='cd-button  cd-buttonWhite' />
+        <div className='cd-colorContainer'>
+          <button onClick={() => setColor('Green')} className='cd-button cd-buttonGreen' />
+          <button onClick={() => setColor('Blue')} className='cd-button cd-buttonBlue' />
+          <button onClick={() => setColor('Red')} className='cd-button cd-buttonRed' />
+          <button onClick={() => setColor('White')} className='cd-button  cd-buttonWhite' />
+        </div>
+        <div className='cd-picsProfile'>
+          <button onClick={() => setProfile(Profile)}>
+            <img src={Profile} alt='profilePic' className='cd-buttonProfile' />
+          </button>
+          <button onClick={() => setProfile(Profile01)}>
+            <img src={Profile01} alt='profilePic' className='cd-buttonProfile' />
+          </button>
+          <button onClick={() => setProfile(Profile02)}>
+            <img src={Profile02} alt='profilePic' className='cd-buttonProfile' />
+          </button>
+          <button onClick={() => setProfile(Profile03)}>
+            <img src={Profile03} alt='profilePic' className='cd-buttonProfile' />
+          </button>
+        </div>
+        <input placeholder='Magma' className='cd-input' value={name} onChange={(e) => setName(e.target.value)} />
       </section>
     </div>
   )
 }
 
-const Card = ({ color, result }) => {
+const Card = ({ color, result, name, profile }) => {
   return (
     <div className={`cd-cardMain cd-cardMain${color}`}>
       <div className={`cd-card cd-card${color}`}>
         <section className='cd-profile'>
-          <img src={Profile} alt='profile' className='cd-profileImage' />
-          <p>Magma</p>
+          <img src={profile} alt='profile' className='cd-profileImage' />
+          <p>{name}</p>
         </section>
         <section className='cd-info'>
           <p className='cd-infoTitle'>{result === 'Imperio' ? 'Galáctico' : 'Alianza'}</p>
